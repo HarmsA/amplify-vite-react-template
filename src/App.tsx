@@ -17,8 +17,10 @@ function App() {
   }, []);
 
   function createTodo() {
-    client.models.Todo.create({ content: window.prompt("Todo content") });
-    console.log({ content: window.prompt("Todo content") })
+    const todoContent = window.prompt("Todo content");
+    // client.models.Todo.create({ content: window.prompt("Todo content") });
+    console.log({ content: todoContent });
+    client.models.Todo.create({ content: todoContent });
   }
 
   function deleteTodo(id: string) {
