@@ -18,6 +18,7 @@ function App() {
 
   function createTodo() {
     client.models.Todo.create({ content: window.prompt("Todo content") });
+    console.log({ content: window.prompt("Todo content") })
   }
 
   function deleteTodo(id: string) {
